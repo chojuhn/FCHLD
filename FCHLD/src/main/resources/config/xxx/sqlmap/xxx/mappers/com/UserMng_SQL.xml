@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.userMng"> 
+
+    <select id="readUserInfo" resultType="userMngV">
+            <!-- com.userMng.readEmployee -->
+            SELECT USR_ID usrId
+                 , USR_NM usrNm
+                 , USR_PW usrPw
+                 , REG_DT regDt
+                 , CHNG_USR_ID chngUsrId
+                 , CHNG_DT chngDt
+                 , LGN_ERR_NCNT lgnErrNcnt
+                 , USE_YN useYn
+                 , DPRT_NM dprtNm
+                 , LST_LGN_DTM lstLgnDtm
+                 , PWD_HST pwdHst
+              FROM tdm_user 
+             WHERE USR_ID = #{usrId}          
+    </select>
+    
+    <select id="readUserAuthList" resultType="roleMngV">
+            <!-- com.userMng.readEmployee -->
+            SELECT a.auth_id authId
+             , b.auth_nm authNm
+             , a.usr_id usrId
+             , a.mgr_yn mgrYn
+             , a.remarks remarks
+          FROM tdm_auth_user a
+               INNER JOIN tdm_auth b
+            ON b.auth_id = a.auth_id
+         WHERE a.usr_id = #{usrId}
+         ORDER BY a.auth_id          
+    </select>
+    
+    <select id="readUserList" resultType="userMngV">
+            <!-- com.userMng.readEmployee -->
+            SELECT USR_ID usrId
+                 , USR_NM usrNm
+                 , USR_PW usrPw
+                 , REG_DT regDt
+                 , CHNG_USR_ID chngUsrId
+                 , CHNG_DT chngDt
+                 , LGN_ERR_NCNT lgnErrNcnt
+                 , USE_YN useYn
+                 , DPRT_NM dprtNm
+                 , LST_LGN_DTM lstLgnDtm
+                 , PWD_HST pwdHst
+              FROM tdm_user 
+             WHERE 1=1
+            <if test="usrId != null and usrId != ''">
+                AND USR_ID LIKE '%' || #{usrId} || '%'
+            </if>
+            <if test="usrNm != null and usrNm != ''">
+                AND USR_NM LIKE '%' || #{usrNm} || '%'
+            </if>         
+    </select>
+    
+    <select id="readUserListCnt" resultType="int">
+            <!-- com.userMng.readEmployee -->
+            SELECT COUNT(*) total
+              FROM tdm_user 
+             WHERE 1=1
+            <if test="usrId != null and usrId != ''">
+                AND USR_ID LIKE '%' || #{usrId} || '%'
+            </if>
+            <if test="usrNm != null and usrNm != ''">
+                AND USR_NM LIKE '%' || #{usrNm} || '%'
+            </if>         
+    </select>
+        
+    <update id="updateUsrPwInfo" parameterType="userMngV">
+        <!-- com.userMng.updateUsrPw -->
+        UPDATE tdm_user
+           SET usr_pw = #{usrPw, jdbcType=VARCHAR}
+             , lgn_err_ncnt = 0
+             , chng_usr_id = #{chngUsrId, jdbcType=VARCHAR}
+             , chng_dt = TO_CHAR(CURRENT_TIMESTAMP, 'YYYYMMDDHH24MISS')
+             , pwd_hst = #{pwdHst, jdbcType=VARCHAR}
+         WHERE usr_id = #{usrId}
+    </update>
+    
+    <!-- 사용자 등록 -->
+    <insert id="addUserInfo" parameterType="userMngV">
+        <!-- com.userMng.addUserInfo -->
+        INSERT INTO tdm_user (
+               usr_id
+             , usr_nm
+             , dprt_nm
+             , usr_pw
+             , use_yn
+             , lgn_err_ncnt
+             , reg_dt
+             , chng_usr_id
+             , chng_dt
+        ) VALUES (
+               #{usrId, jdbcType=VARCHAR}
+             , #{usrNm, jdbcType=VARCHAR}
+             , #{dprtNm, jdbcType=VARCHAR}
+             , #{usrPw, jdbcType=VARCHAR}
+             , #{useYn, jdbcType=VARCHAR}
+             , 0
+             , TO_CHAR(CURRENT_TIMESTAMP, 'YYYYMMDDHH24MISS')
+             , #{chngUsrId, jdbcType=VARCHAR}
+             , TO_CHAR(CURRENT_TIMESTAMP, 'YYYYMMDDHH24MISS')
+        )
+    </insert>
+    
+    <update id="updateUserInfo" parameterType="userMngV">
+        <!-- com.userMng.updateUserInfo -->
+        UPDATE tdm_user
+           SET usr_nm       = #{usrNm, jdbcType=VARCHAR}
+             , use_yn       = #{useYn, jdbcType=VARCHAR}
+             , dprt_nm      = #{dprtNm, jdbcType=VARCHAR}
+             , lgn_err_ncnt = #{lgnErrNcnt, jdbcType=INTEGER}
+             , chng_usr_id  = #{chngUsrId, jdbcType=VARCHAR}
+             , chng_dt      = TO_CHAR(CURRENT_TIMESTAMP, 'YYYYMMDDHH24MISS')
+         WHERE usr_id = #{usrId}
+    </update>  
+
+</mapper>

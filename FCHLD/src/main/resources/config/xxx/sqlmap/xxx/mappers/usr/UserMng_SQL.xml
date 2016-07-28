@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="usr.usrMng">
+
+    <select id="readUserList" parameterType="usrMngV" resultType="kscc.xxx.usr.vo.UsrMngV">
+            <!-- usr.usrMng.readUserList -->
+            SELECT
+                ID, USER_NAME userName, DEPT_NAME deptName, POSITION, position, EMAIL_ADDR emailAddr
+            FROM MYTABLE
+            WHERE 1=1
+            <if test="userName != null and userName != ''">
+                AND	USER_NAME LIKE '%' || #{userName} || '%'
+            </if>
+            <if test="position != null and position != ''">
+                AND	POSITION LIKE '%' || #{position} || '%'
+            </if>
+            ORDER BY ID DESC
+            LIMIT #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <select id="readUserListCnt" parameterType="usrMngV" resultType="int">
+            <!-- usr.usrMng.readUserListCnt -->
+            SELECT COUNT(*) total
+            FROM MYTABLE
+            WHERE 1=1
+            <if test="userName != null and userName != ''">
+                AND	USER_NAME LIKE '%' || #{userName} || '%'
+            </if>
+            <if test="position != null and position != ''">
+                AND	POSITION LIKE '%' || #{position} || '%'
+            </if>
+    </select>
+
+    <insert id="addUserList" parameterType="usrMngV">
+        <!-- usr.usrMng.addUserList -->
+        INSERT INTO MYTABLE
+        (ID, USER_NAME, DEPT_NAME, POSITION, EMAIL_ADDR)
+        VALUES
+        (#{id}, #{userName}, #{deptName},#{position},#{emailAddr})
+    </insert>
+
+</mapper>

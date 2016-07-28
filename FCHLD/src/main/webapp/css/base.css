@@ -1,0 +1,91 @@
+/* HTML Elements
+---------------------------------------------------------*/
+* { margin: 0; padding: 0; vertical-align: middle; }
+*:focus { outline: 0!important; }
+html { height:100%;}
+body { height:100%; font: 75%/1.5em Dotum; color: #494949; background: #fff; }
+ul { list-style: none; }
+a:link, a:visited { color: #6b6b6b; text-decoration: none; }
+a:hover, a:active { color: #ff7e9a; text-decoration: none; }
+hr { display: none; }
+h1 { font-size: 1.2em; }
+img { border: none; vertical-align: middle; }
+img.Lbtn {cursor: pointer;}
+input.Ltext, textarea {font-family:Dotum;font-size:1em;color:#333333;border:1px solid #b8b8b8;vertical-align:middle;padding:3px 3px 1px 3px;*padding:3px 3px 3px 3px;*line-height: 14px;}
+input.LtextTime {font-family:Dotum;font-size:1em;color:#333333;border:1px solid #b8b8b8;vertical-align:middle;padding:3px 3px 1px 3px;*padding:3px 3px 3px 3px;*line-height: 14px;ime-mode:disabled;width:36px;vertical-align:top;}
+input.InputText {font-family:Dotum;font-size:1em;color:#333333;}
+select { font-family: Dotum; font-size: 1em; padding: 2px; color: #333333; border: 1px solid #b8b8b8; vertical-align: middle; padding: 1px 1px 1px 3px; }
+input.Lsearchbt { vertical-align: middle; }
+input.Limage { vertical-align: middle; }
+input.Lsearch { margin-left: 675px; margin-top: 5px; }
+input[type="radio"], input[type="checkbox"] { margin: 0px 5px; vertical-align: middle; border: none;  *margin: 0px;
+}
+option { padding-right: 0.5em; }
+legend { display: none; }
+fieldset { border: none; }
+button { border: none; cursor: pointer; }
+/* Global Classes
+---------------------------------------------------------*/
+.Lclear:after { content: "."; display: block; clear: both; visibility: hidden; height: 0; }
+.Lclear { display: inline-block; }
+* html .Lclear { height: 1%; }
+.Lclear { display: block; }
+.Lhide { position: absolute; width: 0; height: 0; font-size: 0; line-height: 0; overflow: hidden; visibility: hidden; }
+.Lnodisplay { display: none; }
+.LblockLeft { float: left; width: 48.5%; }
+.LblockRight { float: right; width: 48.5%; }
+.LblockLeft2 { float: left; width: 68%; }
+.LblockRight2 { float: right; width: 28%; }
+.LblockLeft3 { float: left; width: 35%; }
+.LblockRight3 { float: right; width: 61%; }
+.LblockLeft_list { float: left; width: 47%; }
+.LblockRight_list { float: right; width: 47%; }
+.LtextLeft { text-align: left !important; }
+.LtextCenter { text-align: center !important; }
+.LtextRight { text-align: right !important; }
+.rvml { behavior: url(#default#VML) }
+
+/* calendar classes--------------------------------------------------*/
+.oddsun a.ui-state-default {font-weight: bold;color: #fa6e19;}
+.oddsat a.ui-state-default {font-weight: bold;color: #2374ee;}
+.ui-datepicker-trigger {width: 19px;height: 20px;display: inline-block;background-image: url(/images/btn_icon_calendar.gif);background-repeat: no-repeat;cursor: pointer;vertical-align:top;}
+#datepicker {width: 60px;}
+.ui-datepicker {display: none;padding: 2px;margin-top: 3px;border: 0px solid #b8b8b8;text-align: center;background: #fcfcfc;}
+.ui-datepicker a {text-decoration: none;}
+.ui-datepicker .ui-datepicker-title {margin-bottom: 4px;}
+.ui-datepicker .styled-select {display: inline-block;height: 20px;text-align: right;overflow: hidden;margin-right: 5px;background: url(/images/btn_date_select.png) no-repeat 85% 50%;}
+.ui-datepicker .styled-select select {background: transparent;width: 60px;height: 20px;text-align: right;font-weight: bold;color: #3f3f3f;-webkit-appearance: none;cursor: pointer;}
+.ui-datepicker table {border-collapse: collapse;}
+.ui-datepicker th {width: 28px;height: 18px;color: #fff;font-weight: normal;border: 1px solid #b1b1b1;background: #b1b1b1;}
+.ui-datepicker td {width: 28px;height: 28px;border: 1px solid #e4e4e4;cursor: pointer;}
+.ui-datepicker td a {color: #191919;}
+.ui-datepicker td:hover {background: #855fa4;}
+.ui-datepicker td:hover a {color: #fff !important;}
+.ui-datepicker .ui-datepicker-other-month {background: #f3f3f3;}
+.ui-datepicker .ui-datepicker-other-month span {color: #494949;}
+.ui-datepicker .ui-datepicker-today {background: #dfc5f0;}
+.ui-datepicker .ui-datepicker-today a {color: #503269;}
+.ui-datepicker-other-month .ui-datepicker-unselectable {background: #f3f3f3;}
+.ui-datepicker .ui-datepicker-buttonpane {position: absolute;top: 8px;right: 6px;}
+.ui-datepicker .ui-datepicker-close {width: 13px;height: 13px;color: transparent;background: url(/images/btn_cal_close.png) no-repeat 90%;}
+.ui-datepicker .ui-widget-header {border: 1px solid #e4e4e4;color: #ffffff;}
+td.ui-datepicker-current-day{background:#855fa4;color:#ffffff!important;}
+.ui-datepicker-next,.ui-datepicker-prev {display: block;}
+.ui-datepicker-current {display: none;background: none;}
+.ui-datepicker .ui-state-disabled {background: #e2e2e2;}
+.datePickerDash {position: absolute;display: none;background: #ffffff;z-index: 1;text-align: center;border: 1px solid #b8b8b8;font-weight: bold;}
+.datePickerDash div {margin-top: 100px;}
+.datePickerCloseBtn {cursor: pointer;position: absolute;width: 13px;height: 13px;color: transparent;display: inline-block;background: url(/images/btn_cal_close.png) no-repeat 90%;z-index: 200;display: none;}
+/*------월달력--------------*/
+.monthPicker{width:181px;padding:2px; border:1px solid #d8d8d8; background-color:#fff;}
+.monthPicker table {border-collapse:collapse;}
+.monthpickerTop{width:181px;background-color:#fff;height:24px;}
+.yearSelect{text-align:center;border:1px solid #e4e4e4;padding:2px 0px;}
+.yearSelect img{position:relative;left:45px;}
+.monthpickerTop select{background: transparent;width: 60px;height: 20px;font-weight: bold;color: #3f3f3f;-webkit-appearance: none;cursor: pointer;border:1px solid #e4e4e4;}
+.monthpickerBottom{ background-color:#fff;margin-top:6px;}
+.monthpickerBottom tr{height:32px}
+.monthpickerBottom td {cursor:pointer;border:1px solid #e4e4e4;}
+.monthpickerBottom td a {display:block;overflow:hidden;width:44px;height:32px;text-align:center;line-height:2.8; text-decoration:none;color:#111;}
+.monthpickerBottom td :hover{width:44px;height:32px;cursor:pointer;color:#fff;background-color:#855fa4}
+.monthpickerBottom .monthSelected{color:#503269;background-color:#dfc5f0;}

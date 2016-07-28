@@ -1,0 +1,9 @@
+.LblockBlank { position: relative; }
+#LblockBlank01 { position: relative; }
+#LblockShuttleButton { position: absolute; top: 42%; margin: -35px 0 0 -4px; }
+.LblockShuttleButton01 { left: 49.5%; }
+.LblockShuttleButton02 { left: 69.5%; }
+.LblockListTable .LblockPageSubtitleInList { margin-top: 0; }
+.LblockListTable #LblockSearch.LblockSearchInList div div div { padding-bottom: 0; }
+.LblockListTable #LblockSearch.LblockSearchInList div div div table th, .LblockListTable #LblockSearch.LblockSearchInList div div div table td { height: 10px; }
+#LblockShuttleButton01 { position: absolute; left: 49.5%; top: 42%; margin: -35px 0 0 -4px; }

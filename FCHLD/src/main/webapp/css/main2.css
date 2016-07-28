@@ -1,0 +1,57 @@
+/* Block : main
+---------------------------------------------------------*/
+/* layout
+---------------------------------------------------------*/
+#LblockMain2 {
+	padding:20px 30px;
+	font-family:Gulim;
+	font-size:1em;
+}
+#LblockMain2:after { content: "."; display: block; clear: both; visibility: hidden; height: 0; }
+
+#LblockMain2 .lMainLayout01{
+	width:34%;
+	float:left;
+}
+
+#LblockMain2 .lMainLayou02{
+	width:32%;
+	float:right;
+}
+
+#LblockMain2 .lMainLayout01 .LMainBox{
+	margin-right:15px;
+}
+
+/* style
+---------------------------------------------------------*/
+/* LcontentBox */
+#LblockMain2 .LMainBox {
+	background:#FFF;
+	height:200px;
+	border-top:1px solid #c7b3d7;border-left:1px solid #ac8ac8; border-right:1px solid #8b63ad; border-bottom:1px solid #8b63ad;
+	position: relative;
+}
+
+#LblockMain2 .LMainBox h2 {
+	background:#e6dbee url(../images/ico_main_h2.png) no-repeat 10px center;
+	padding:5px 20px 5px 30px;
+	font-size:12px;
+	font-weight:normal;
+}
+.LMainBtn {
+	background:#e6dbee url(../images/ico_main_h2.png) no-repeat 10px center;
+	padding:5px 20px 5px 30px;
+	font-size:12px;
+	font-weight:normal;
+	position: absolute; right: 2px; top: 0px;
+}
+
+#LblockMain2 .LMainBox .LMBoxContent {
+	padding:16px 16px 8px;
+}
+
+#LblockMain2 .LMainBox .LMBoxContent .LblockListTable{
+	margin-bottom:0;
+	height:146px;overflow:auto;
+}

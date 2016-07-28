@@ -1,0 +1,37 @@
+.ui-layout-pane { /* all 'panes' */ overflow:auto;}
+/* css for tab */
+#tabs {padding: 0;margin:0 ; font-family:Dotum; border:0px solid #ff0000 }
+.ui-tabs-vertical {padding: 0;margin:0 ;  width: 260px; height:100%; border:0px solid #00ff00} /*  Tab + Panel width*/
+.ui-tabs-vertical .ui-tabs-nav { padding: 0; margin: 0; float: left; width: 26px;border:0px solid #0000ff } /* Tab outline width */
+.ui-tabs-vertical .ui-tabs-nav li {  clear: left; padding: 0;margin:0; width:26px; height:26px;border-bottom-width: 0px !important; border-right-width: 0 !important; margin: 0;}
+.ui-tabs-vertical .ui-tabs-nav li a{padding: 0; margin:0; float: left; text-decoration: none; border:0px solid #00ff00}
+.ui-tabs-vertical .ui-tabs-panel { padding: 0em; float: left; width: 21em;height:100%; border:0px solid #0000ff} /*  TabPanel width*/
+.ui-tabs-vertical .ui-state-default{ border: 0px solid #d3d3d3; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-active { margin-bottom: 0px; padding-bottom: 0px; }
+.tab_menu_cur { background: url(images/btn_menu_current.gif) no-repeat top; }
+.tab_menu_non { background: url(images/btn_menu.gif) no-repeat top; }
+.tab_menu_non:hover{ background: url(images/btn_menu_hover.gif) no-repeat top;}
+.tab_favo_cur { background: url(images/btn_favorite_current.gif) no-repeat top; }
+.tab_favo_non { background: url(images/btn_favorite.gif) no-repeat top; }
+.tab_favo_non:hover{ background: url(images/btn_favorite_hover.gif) no-repeat top;}
+.tab_hist_cur { background: url(images/btn_history_current.gif) no-repeat top; }
+.tab_hist_non { background: url(images/btn_history.gif) no-repeat top; }
+.tab_hist_non:hover{ background: url(images/btn_history_hover.gif) no-repeat top;}
+/* css for tree */
+#left-menu-acco li ul{ margin:0; padding:0; }
+#left-menu-acco li.level0{margin:0 0 0 14px;padding:0;line-height:29px; border-bottom:1px solid #e8e8e8; }
+#left-menu-acco span.button.switch.level0 {display:none;}
+#left-menu-acco li.level0.curSelectedNode {background-color:#FFFFFF; line-height:50px; font-weight:bold;color:black; vertical-align: middle; }
+#left-menu-acco li.level0 a{vertical-align: middle;}
+#left-menu-acco li.level0 a.level0 {line-height:30px;height:30px;padding:0;}
+#left-menu-acco li.level0 a.level0 span {line-height:30px;height:30px;}
+#left-menu-acco li.level0.curSelectedNode a{vertical-align: middle;}
+#left-menu-acco li a{vertical-align: middle;}
+#left-menu-acco li a:hover {text-decoration:none; color: #fa6e19;}
+#left-menu-acco li.level1 {background: #f3f3f3;line-height:24px; vertical-align:middle;}
+#left-menu-acco li span.button.switch {width: 16px;height: 16px;}
+#left-menu-acco li span.button {background-image:url(""); *background-image:url("")}
+#left-menu-acco li span.button.switch.level0 {width: 20px; height:30px}
+#left-menu-acco li span.button.switch.level1 {width: 20px; height:24px}
+#left-menu-acco.ztree li li {line-height:27px;margin:0 -10px -1px -14px;}
+#left-menu-acco.ztree li li a {background: url(images/leftMenu_blt_2.gif) no-repeat 0px 10px;}

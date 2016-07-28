@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.loginMng"> 
+
+    <select id="readUserInfo" resultType="loginMngV">
+            <!-- admin.loginMng.readEmployee -->
+            SELECT USR_ID usrId
+                 , USR_NM usrNm
+                 , USR_PW usrPw
+                 , REG_DT regDt
+                 , CHNG_USR_ID chngUsrId
+                 , CHNG_DT chngDt
+                 , LGN_ERR_NCNT lgnErrNcnt
+                 , USE_YN useYn
+                 , DPRT_NM dprtNm
+                 , LST_LGN_DTM lstLgnDtm
+                 , PWD_HST pwdHst
+              FROM tdm_user 
+             WHERE USE_YN='Y'
+               AND USR_ID = #{usrId}          
+    </select>
+    
+    <select id="readUserAuthList" resultType="roleMngV">
+        <!-- admin.loginMng.readEmployee -->
+        SELECT a.auth_id authId
+             , b.auth_nm authNm
+             , a.usr_id usrId
+             , a.mgr_yn mgrYn
+             , a.remarks remarks
+          FROM tdm_auth_user a
+               INNER JOIN tdm_auth b
+            ON b.auth_id = a.auth_id
+         WHERE a.usr_id = #{usrId}
+         ORDER BY a.auth_id          
+    </select>
+        
+    <update id="updateUsrPw" parameterType="loginMngV">
+        <!-- admin.loginMng.updateUsrPw -->
+        UPDATE tdm_user
+           SET usr_pw = #{usrPw, jdbcType=VARCHAR}
+             , lgn_err_ncnt = 0
+             , chng_usr_id = #{chngUsrId, jdbcType=VARCHAR}
+             , chng_dt = TO_CHAR(CURRENT_TIMESTAMP, 'YYYYMMDDHH24MISS')
+             , pwd_hst = #{pwdHst, jdbcType=VARCHAR}
+         WHERE usr_id = #{usrId}
+    </update>
+    
+    <update id="updateLstLgnDtm" parameterType="loginMngV">
+        <!-- admin.loginMng.updateLstLgnDtm -->
+        UPDATE tdm_user
+           SET lst_lgn_dtm = TO_CHAR(CURRENT_TIMESTAMP, 'YYYYMMDDHH24MISS')
+              ,lgn_err_ncnt = 0
+         WHERE usr_id = #{usrId}
+    </update>    
+    
+    <!-- 로그인 에러 카운트 -->
+    <update id="updateLgnErrNcnt" parameterType="String" >
+        <!-- admin.loginMng.updateLgnErrNcnt -->
+        UPDATE tdm_user
+           SET lgn_err_ncnt = NVL(LGN_ERR_NCNT, 0)+1
+             , chng_dt = TO_CHAR(CURRENT_TIMESTAMP, 'YYYYMMDDHH24MISS')
+         WHERE usr_id = #{usrId}
+    </update>
+    
+    <select id="readLgnErrNcnt" resultType="int" parameterType="String" >
+        <!-- admin.loginMng.readLgnErrNcnt -->
+        SELECT lgn_err_ncnt lgnErrNcnt
+          FROM tdm_user
+         WHERE usr_id = #{usrId}
+    </select>
+
+</mapper>

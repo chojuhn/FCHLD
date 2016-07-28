@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+
+    <mapping path="/com/login.do" exclude="true" />
+    
+    <mapping path="/**/*.do"      decorator="/WEB-INF/jsp/kscc/xxx/common/decorator/default-layout.jsp" />
+    <mapping path="/**/*Popup.do" decorator="/WEB-INF/jsp/kscc/xxx/common/decorator/popup-layout.jsp" />
+</sitemesh>

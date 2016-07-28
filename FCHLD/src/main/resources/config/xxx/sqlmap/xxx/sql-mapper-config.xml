@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <typeAlias alias="loginMngV" type="kscc.com.login.vo.LoginMngV"/>
+        <typeAlias alias="roleMngV"  type="kscc.com.login.vo.RoleMngV"/>
+        <typeAlias alias="userMngV"  type="kscc.com.user.vo.UserMngV"/>
+        
+        <typeAlias alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+        <typeAlias alias="searchV" type="kscc.framework.paging.vo.BasePagingV"/>
+        <!-- <typeAlias alias="sampleV" type="kscc.lss.smpl.vo.SampleV"/>-->
+        <typeAlias alias="usrMngV" type="kscc.xxx.usr.vo.UsrMngV"/>
+        <typeAlias alias="employeeV" type="kscc.xxx.usr.vo.EmployeeV"/>
+        <typeAlias alias="uploadFileInfoV" type="kscc.framework.file.UploadFileInfoV"/>        
+    </typeAliases>
+</configuration>

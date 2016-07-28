@@ -1,0 +1,282 @@
+/* Block : main
+---------------------------------------------------------*/
+/* layout
+---------------------------------------------------------*/
+div#LblockMain {
+	width:950px;
+	padding:15px 0px 10px 45px;
+	background:none;
+}
+#LblockMain #LmainTitleImage {
+	display:block;
+	margin-bottom:10px;
+	float:left;
+}
+#LblockMain #LcontentBox01 {
+	float:left;
+	width:37%;
+	margin-right:8px;
+}
+#LblockMain #LtabBox01 {
+	float:left;
+	width:38%;
+}
+#LblockMain #Lgroup01 {
+	float:right;
+	width:222px;
+}
+#LblockMain #Ltoday {
+	position:relative;
+	margin-bottom:10px;
+}
+
+/* style
+---------------------------------------------------------*/
+#LblockMain {
+	font-family:Gulim;
+	font-size:1em;
+}
+/* LcontentBox */
+#LblockMain .LcontentBox {
+	position:relative;
+	background:url(../images/main_contentbox_r1.gif) no-repeat left top;
+}
+#LblockMain .LcontentBox div {
+	background:url(../images/main_contentbox_r2.gif) no-repeat right top;
+}
+* html #LblockMain .LcontentBox div {
+	height:1%;
+}
+*:first-child+html #LblockMain .LcontentBox div {
+	min-height:1%;
+}
+#LblockMain .LcontentBox div div{
+	background:url(../images/main_contentbox_r3.gif) no-repeat left bottom;
+}
+#LblockMain .LcontentBox div div div{
+	background:url(../images/main_contentbox_r4.gif) no-repeat right bottom;
+}
+#LblockMain .LcontentBox div div div div {
+	padding:0;
+	background:none;
+}
+#LblockMain .LcontentBox .Ltitlebar {
+	height:39px;
+}
+#LblockMain .LcontentBox .Ltitlebar h2{
+	padding:2px 0 0 35px;
+}
+#LblockMain .LcontentBox .Ltitlebar img {
+	position:absolute;
+	top:6px;
+	right:7px;
+	cursor:pointer;
+}
+#LblockMain .LcontentBox .Ltitlebar span {
+	float:left;
+	display:block;
+	line-height:23px;
+	padding:0 70px 0 0;
+	color:#414141;
+	font-size:10pt;
+	margin-left:-15px;
+}
+#LblockMain .LcontentBox ul {
+	padding:10px 0 15px 0; 
+}
+#LblockMain .LcontentBox li {
+	position:relative;
+	line-height:26px;
+	padding:2px 20px;
+}
+* html #LblockMain .LcontentBox li {
+	height:1%;
+}
+*:first-child+html #LblockMain .LcontentBox li {
+	min-height:1%;
+}
+#LblockMain .LcontentBox li.Lhover {
+}
+#LblockMain .LcontentBox li a {
+	color:#5D5D5D;
+}
+#LblockMain .LcontentBox li a:hover {
+	color:#ff9600;
+	text-decoration:none;
+}
+#LblockMain .LcontentBox li span {
+	position:absolute;
+	right:20px;
+	bottom:1px;
+	color:#5D5D5D;
+}
+
+/* LtabBox */
+#LblockMain .LtabBox {
+	position:relative;
+	background:url(../images/main_contentbox_r1_1.gif) no-repeat left top;
+}
+#LblockMain .LtabBox div {
+	background:url(../images/main_contentbox_r2.gif) no-repeat right top;
+}
+* html #LblockMain .LtabBox div {
+	height:1%;
+}
+*:first-child+html #LblockMain .LtabBox div {
+	min-height:1%;
+}
+#LblockMain .LtabBox div div{
+	background:url(../images/main_contentbox_r3.gif) no-repeat left bottom;
+}
+#LblockMain .LtabBox div div div{
+	background:url(../images/main_contentbox_r4.gif) no-repeat right bottom;
+}
+#LblockMain .LtabBox div div div div {
+	padding:0;
+	background:none;
+}
+#LblockMain .LtabBox .LblockTab {
+	height:38px;
+}
+#LblockMain .LblockTab ul {
+	position:relative;
+	bottom:4px;
+	float:left;
+	background:url(../images/menuSelbg.png) no-repeat;
+}
+#LblockMain .LblockTab li {
+	float:left;
+}
+#LblockMain .LblockTab li span{
+	display:block;
+}
+
+#LblockMain .LblockTab li a {
+	padding:0 0 0 18px;
+	color:#b4b4b4;
+	font-size:1.1em;
+	font-weight:bold;
+	line-height:38px;
+	text-decoration:none;
+}
+#LblockMain .LblockTab li a:hover {
+	color:#ffee5c;
+}
+#LblockMain .LblockTab li.Lcurrent a {
+	color:#414141;
+}
+#LblockMain .LtabBox img {
+	position:absolute;
+	top:6px;
+	right:7px;
+	cursor:pointer;
+}	
+#LblockMain .LtabContent ul {
+	padding:11px 0 15px 0; 
+}
+#LblockMain .LtabContent li {
+	position:relative;
+	line-height:26px;
+	padding:2px 20px;
+}
+* html #LblockMain .LtabContent li {
+	height:1%;
+}
+*:first-child+html #LblockMain .LtabContent li {
+	min-height:1%;
+}
+#LblockMain .LtabContent li a {
+	color:#777777;
+	text-decoration:none;
+}
+#LblockMain .LtabContent li a:hover {
+	color:#ff9600;
+}
+#LblockMain .LtabContent li span {
+	position:absolute;
+	right:20px;
+	bottom:1px;
+	color:#777777;
+}
+
+/* LcontentBox2 */
+#LblockMain .LcontentBox2 {
+	position:relative;
+	background:url(../images/main_contentbox2_r1.gif) no-repeat left top;
+}
+#LblockMain .LcontentBox2 div {
+	background:url(../images/main_contentbox2_r2.gif) no-repeat right top;
+}
+* html #LblockMain .LcontentBox2 div {
+	height:1%;
+}
+*:first-child+html #LblockMain .LcontentBox2 div {
+	min-height:1%;
+}
+#LblockMain .LcontentBox2 div div{
+	background:url(../images/main_contentbox2_r3.gif) no-repeat left bottom;
+}
+#LblockMain .LcontentBox2 div div div{
+	background:url(../images/main_contentbox2_r4.gif) no-repeat right bottom;
+}
+#LblockMain .LcontentBox2 div div div div {
+	padding:0;
+	background:none;
+}
+/* Ltoday */
+#LblockMain #Ltoday h2 {
+	padding:5px 0 5px 20px;
+	font-size:1.1em;
+	color:#414141;
+	background:url(../images/main_today_head_bg.gif) no-repeat 70px 50%;
+}
+#LblockMain #Ltoday h2 span {
+	padding-left:20px;
+	color:#414141;
+	font-weight:normal;
+}
+#LblockMain #Ltoday ul {
+	padding-bottom:10px;
+}
+#LblockMain #Ltoday li {
+	float:left;
+	display:inline;
+	width:50px;
+	text-align:center;
+	padding:10px 8px;
+	border-right:1px solid #f4f2f3;
+}
+#LblockMain #Ltoday li.mail {
+	margin-left:11px;
+}
+#LblockMain #Ltoday li.sche {
+	padding:10px 9px;
+}
+#LblockMain #Ltoday li.todo {
+	border-right:none;
+}
+#LblockMain #Ltoday a {
+	color:#6F6F6F;
+	text-decoration:none;
+}
+#LblockMain #Ltoday img {
+	display:block;
+}
+
+/* Lrelated */
+#LblockMain #Lrelated div div div div {
+	height:77px;
+	padding:1px;
+}
+#LblockMain #Lrelated h2 {
+	padding:5px 0 5px 18px;
+	line-height:20px;
+	font-size:1.1em;
+	color:#414141;
+}
+#LblockMain #Lrelated select {
+	display:block;
+	margin:25px 0 0 18px;
+	width:180px;
+	color:#979797;
+}

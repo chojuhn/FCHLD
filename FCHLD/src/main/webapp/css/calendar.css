@@ -1,0 +1,51 @@
+﻿/**
+ * @author LG CNS LHH
+ */
+
+
+.LblockDetail td input:nth-child(n+1) { /*margin-left: 5px;*/
+}
+/* datepicker */
+#datepicker { width: 60px; }
+#ui-datepicker-div { display: none; padding: 2px; margin-top: 3px; border: 1px solid #b8b8b8; text-align: center; background: #fcfcfc; }
+#ui-datepicker-div a { text-decoration: none; }
+#ui-datepicker-div .ui-datepicker-title { margin-bottom: 4px; }
+#ui-datepicker-div .styled-select { display: inline-block; height: 20px; text-align: right; overflow: hidden; margin-right: 5px; background: url(../images/btn_date_select.png) no-repeat 85% 50%; }
+#ui-datepicker-div .styled-select select { background: transparent; border: 1; width: 60px; height: 20px; text-align: right; font-weight: bold; color: #3f3f3f; -webkit-appearance: none; cursor: pointer; }
+#ui-datepicker-div .styled-select:nth-of-type(2) select { /*width: 50px;*/
+}
+#ui-datepicker-div table { border-collapse: collapse; }
+#ui-datepicker-div th { width: 28px; height: 18px; color: #fff; font-weight: normal; border: 1px solid #b1b1b1; background: #b1b1b1; }
+#ui-datepicker-div td { width: 28px; height: 28px; border: 1px solid #e4e4e4; cursor: pointer; }
+#ui-datepicker-div td a { color: #191919; }
+#ui-datepicker-div td:hover { background: #855fa4; }
+#ui-datepicker-div td:hover a { color: #fff !important; }
+#ui-datepicker-div .ui-datepicker-week-end a { color: #fa6e19; }
+#ui-datepicker-div .ui-datepicker-week-end:nth-of-type(7) a { color: #2374ee; }
+#ui-datepicker-div .ui-datepicker-other-month { background: #f3f3f3; }
+#ui-datepicker-div .ui-datepicker-other-month span { color: #afafaf; }
+#ui-datepicker-div .ui-datepicker-today { background: #dfc5f0; }
+#ui-datepicker-div .ui-datepicker-today a { color: #503269; }
+#ui-datepicker-div .ui-datepicker-buttonpane { position: absolute; top: 5px; right: 6px; }
+#ui-datepicker-div .ui-datepicker-close { width: 15px; color: transparent; background: url(../images/btn_cal_close.png) no-repeat 90%; }
+/* 이전, 다음 버튼 제거 (임시) */
+.ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-current { display: none; }
+/* monthpicker */
+#monthpicker { width: 80px; }
+#month-picker { padding: 2px; border: 1px solid #b8b8b8; text-align: center; background: #fcfcfc; }
+#month-picker a { text-decoration: none; }
+#month-picker .ui-datepicker-header { margin-bottom: 4px; }
+#month-picker .styled-select { display: inline-block; height: 20px; text-align: right; overflow: hidden; margin-right: 5px; background: url(../images/btn_date_select.png) no-repeat 85% 50%; }
+#month-picker .styled-select select { background: transparent; width: 60px; height: 20px; text-align: right; font-weight: bold; color: #3f3f3f; -webkit-appearance: none; cursor: pointer; }
+#month-picker .styled-select:nth-of-type(2) select { /*width: 50px;*/
+}
+#month-picker table { border-collapse: collapse; }
+#month-picker td { width: 44px; height: 32px; color: #191919; cursor: pointer; border: 1px solid #e4e4e4; }
+#month-picker td:hover { color: #fff !important; background: #855fa4; }
+#month-picker .monthpicker-close { position: absolute; top: 7px; right: 6px; width: 15px; height: 15px; cursor: pointer; }
+#month-picker .ui-state-currentMonth { color: #503269; background: #dfc5f0; }
+/* daterangepicker */
+#ui-datepicker-div.ui-datepicker-multi { width: 430px !important; background: url(../images/ico_wave.png) no-repeat 51% 55%, #fff; }
+.ui-datepicker-group { display: inline-block; vertical-align: top; }
+.ui-datepicker-group:first-child { margin-right: 20px; }
+#datestart, #dateend { width: 80px; }

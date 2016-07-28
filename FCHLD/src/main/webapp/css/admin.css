@@ -1,0 +1,385 @@
+
+TABLE.Bgcolor
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: "돋움";
+    BACKGROUND-COLOR: #CCCCCC;
+}
+
+TR.ListC
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: "돋움";
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #E5E5E5;
+}
+
+TR.ListW
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: "돋움";
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #ffffff;
+}
+
+TD.SelTtlC
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: "돋움";
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #E5E5E5;
+	TEXT-ALIGN: Center;
+}
+
+TD.SelTtlL
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: "돋움";
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #E5E5E5;
+	TEXT-ALIGN: Left;
+}
+
+TD.SelTtlR
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: "돋움";
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #E5E5E5;
+	TEXT-ALIGN: Right;
+}
+
+TD.SelC
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: "돋움";
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #ffffff;
+	TEXT-ALIGN: Center;
+}
+
+TD.SelL
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: "돋움";
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #ffffff;
+	TEXT-ALIGN: Left;
+}
+
+TD.SelR
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: "돋움";
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #ffffff;
+	TEXT-ALIGN: Right;
+}
+
+INPUT.InputC
+{
+    BORDER-TOP: #999999 1px double;
+    BORDER-LEFT: #999999 1px double;
+	BORDER-RIGHT: #999999 1px double;
+    BORDER-BOTTOM: #999999 1px double;
+	BACKGROUND-COLOR: #ffffff;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: 돋움;
+    HEIGHT: 19px;
+    TEXT-ALIGN: Center;
+}
+
+INPUT.InputL
+{
+    BORDER-TOP: #999999 1px double;
+    BORDER-LEFT: #999999 1px double;
+	BORDER-RIGHT: #999999 1px double;
+    BORDER-BOTTOM: #999999 1px double;
+	BACKGROUND-COLOR: #ffffff;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: 돋움;
+    HEIGHT: 19px;
+    TEXT-ALIGN: Left;
+}
+
+INPUT.InputR
+{
+    BORDER-TOP: #999999 1px double;
+    BORDER-LEFT: #999999 1px double;
+	BORDER-RIGHT: #999999 1px double;
+    BORDER-BOTTOM: #999999 1px double;
+	BACKGROUND-COLOR: #ffffff;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: 돋움;
+    HEIGHT: 19px;
+    TEXT-ALIGN: Right;
+}
+
+INPUT.ReadOnlyC
+{
+    BORDER-TOP: #999999 1px double;
+    BORDER-LEFT: #999999 1px double;
+	BORDER-RIGHT: #999999 1px double;
+    BORDER-BOTTOM: #999999 1px double;
+	BACKGROUND-COLOR: #ecf0f0;
+	FONT-SIZE: 9pt;
+	FONT-FAMILY: "돋움";    
+    HEIGHT: 19px;
+	TEXT-ALIGN: Center;
+}
+
+INPUT.ReadOnlyL
+{
+    BORDER-TOP: #999999 1px double;
+    BORDER-LEFT: #999999 1px double;
+	BORDER-RIGHT: #999999 1px double;
+    BORDER-BOTTOM: #999999 1px double;
+	BACKGROUND-COLOR: #ecf0f0;
+	FONT-SIZE: 9pt;
+	FONT-FAMILY: "돋움";    
+    HEIGHT: 19px;
+	TEXT-ALIGN: Left;
+}
+
+INPUT.ReadOnlyR
+{
+    BORDER-TOP: #999999 1px double;
+    BORDER-LEFT: #999999 1px double;
+	BORDER-RIGHT: #999999 1px double;
+    BORDER-BOTTOM: #999999 1px double;
+	BACKGROUND-COLOR: #ecf0f0;
+	FONT-SIZE: 9pt;
+	FONT-FAMILY: "돋움";    
+    HEIGHT: 19px;
+	TEXT-ALIGN: Right;
+}
+
+INPUT.InputC_BG
+{
+    BORDER-TOP: #999999 1px double;
+    BORDER-LEFT: #999999 1px double;
+	BORDER-RIGHT: #999999 1px double;
+    BORDER-BOTTOM: #999999 1px double;
+	BACKGROUND-COLOR: #ffffff;
+	BACKGROUND-POSITION: right;
+    BACKGROUND-IMAGE: url(/mktp/images/common/icon_compel.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: 돋움;
+    HEIGHT: 19px;
+    TEXT-ALIGN: Center;
+}
+
+INPUT.InputL_BG
+{
+    BORDER-TOP: #999999 1px double;
+    BORDER-LEFT: #999999 1px double;
+	BORDER-RIGHT: #999999 1px double;
+    BORDER-BOTTOM: #999999 1px double;
+	BACKGROUND-COLOR: #ffffff;
+	BACKGROUND-POSITION: right;
+    BACKGROUND-IMAGE: url(/mktp/images/common/icon_compel.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: 돋움;
+    HEIGHT: 19px;
+    TEXT-ALIGN: Left;
+}
+
+INPUT.InputR
+{
+    BORDER-TOP: #999999 1px double;
+    BORDER-LEFT: #999999 1px double;
+	BORDER-RIGHT: #999999 1px double;
+    BORDER-BOTTOM: #999999 1px double;
+	BACKGROUND-COLOR: #ffffff;
+	BACKGROUND-POSITION: right;
+    BACKGROUND-IMAGE: url(/mktp/images/common/icon_compel.gif);
+    BACKGROUND-REPEAT: no-repeat;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: 돋움;
+    HEIGHT: 19px;
+    TEXT-ALIGN: Right;
+}
+
+TEXTAREA.CInput
+{
+    BORDER-TOP-STYLE: groove;
+    BORDER-LEFT-STYLE: groove;
+    BORDER-RIGHT-STYLE: groove;
+    BORDER-BOTTOM-STYLE: groove;
+    BACKGROUND-COLOR: #ffffff;
+	FONT-SIZE: 9pt;
+	FONT-FAMILY: "돋움";
+}
+
+TEXTAREA.CReadOnly
+{
+    BORDER-TOP-STYLE: groove;
+    BORDER-LEFT-STYLE: groove;
+    BORDER-RIGHT-STYLE: groove;
+    BORDER-BOTTOM-STYLE: groove;
+    BACKGROUND-COLOR: #ecf0f0;
+	FONT-SIZE: 9pt;
+	FONT-FAMILY: "돋움";
+}
+
+#Proccess_Ing
+{
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:1000;
+	display:none;
+}
+
+#Proccess_Ing div.Proccess_Ing_BG
+{
+	width:100%;
+	height:100%;
+	filter:alpha(opacity=40);
+	opacity: 0.7;
+	-moz-opacity:0.7;
+	background-color:#000000;
+}
+
+#Proccess_Ing div.Proccess_Ing_Content
+{
+	/* 띄울 내용 */
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	margin:0 0 0 0;
+	position:absolute;
+}
+
+#DIV_PROCCESS_PAGE_01
+{
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:1000;
+	display:none;
+}
+
+#DIV_PROCCESS_PAGE_01 div.DIV_PROCCESS_PAGE_01_BG
+{
+	width:100%;
+	height:100%;
+	filter:alpha(opacity=40);
+	opacity: 0.7;
+	-moz-opacity:0.7;
+	background-color:#000000;
+}
+
+#DIV_PROCCESS_PAGE_01 div.DIV_PROCCESS_PAGE_01_CONTENT
+{
+	/* 띄울 내용 */
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	margin:0 0 0 0;
+	position:absolute;
+}
+
+#DIV_PROCCESS_PAGE_02
+{
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:1000;
+	display:none;
+}
+
+#DIV_PROCCESS_PAGE_02 div.DIV_PROCCESS_PAGE_02_BG
+{
+	width:100%;
+	height:100%;
+	filter:alpha(opacity=40);
+	opacity: 0.7;
+	-moz-opacity:0.7;
+	background-color:#000000;
+}
+
+#DIV_PROCCESS_PAGE_02 div.DIV_PROCCESS_PAGE_02_CONTENT
+{
+	/* 띄울 내용 */
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	margin:0 0 0 0;
+	position:absolute;
+}
+
+#DIV_PROCCESS_PAGE_03
+{
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:1000;
+	display:none;
+}
+
+#DIV_PROCCESS_PAGE_03 div.DIV_PROCCESS_PAGE_03_BG
+{
+	width:100%;
+	height:100%;
+	filter:alpha(opacity=40);
+	opacity: 0.7;
+	-moz-opacity:0.7;
+	background-color:#000000;
+}
+
+#DIV_PROCCESS_PAGE_03 div.DIV_PROCCESS_PAGE_03_CONTENT
+{
+	/* 띄울 내용 */
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	margin:0 0 0 0;
+	position:absolute;
+}
+
+#DIV_INFORMATION_PAGE
+{
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	position:absolute;
+	z-index:1000;
+	display:none;
+}
+
+#DIV_INFORMATION_PAGE div.DIV_INFORMATION_PAGE_BG
+{
+	width:100%;
+	height:100%;
+	filter:alpha(opacity=40);
+	opacity: 0.7;
+	-moz-opacity:0.7;
+	background-color:#000000;
+}
+
+#DIV_INFORMATION_PAGE div.DIV_INFORMATION_PAGE_CONTENT
+{
+	/* 띄울 내용 */
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	margin:0 0 0 0;
+	position:absolute;
+}

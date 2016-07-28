@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sample.sampleMng">
+
+    <select id="readEmployeeList" resultType="employeeV">
+            <!-- sample.sampleMng.readEmployee -->
+            SELECT
+                NUM, NAME, BIRTHDATE, SEX, TELEPHONE, ADDRESS, POSTAL
+            FROM UIP_EMPLOYEE
+            WHERE NUM like '4000%'
+            <if test="sidx != null and sidx != ''">
+                ORDER BY ${sidx} 
+                 <if test="sord == 'desc'">DESC</if>
+                 <if test="sord == 'asc'" >ASC</if>
+            </if>
+            
+    </select>
+    
+    <select id="readEmployeeListCnt" resultType="int">
+            <!-- sample.sampleMng.readEmployee -->
+            SELECT
+                COUNT(*) total
+            FROM UIP_EMPLOYEE
+            WHERE NUM like '4000%'
+    </select>
+
+    <select id="readEmployee2" resultType="employeeV">
+            <!-- sample.sampleMng.readEmployee -->
+            SELECT
+                NUM, NAME
+            FROM UIP_EMPLOYEE
+            WHERE NUM like '9000%'
+    </select>
+
+    <select id="addEmployee">
+            <!-- sample.sampleMng.addEmployee -->
+            INSERT INTO UIP_EMPLOYEE
+            (NUM, NAME)
+            VALUES
+            (#{num}, #{name})
+    </select>
+    
+    <insert id="addFileUploadList" parameterType="uploadFileInfoV">
+        <!-- kscc.framework.addFileUploadList -->
+        INSERT INTO MYTABLE
+        (ID, USER_NAME, DEPT_NAME, POSITION, EMAIL_ADDR)
+        VALUES
+        (#{id}, #{userName}, #{deptName},#{position},#{emailAddr})
+    </insert>
+    
+    <select id="readListCnt" parameterType="employeeV" resultType="int">
+            <!-- sample.sampleMng.readListCnt -->
+            SELECT COUNT(*) total
+            FROM UIP_EMPLOYEE
+            WHERE 1=1
+            <if test="name != null and name != ''">
+                AND	NAME LIKE '%' || #{name} || '%'
+            </if>
+            <if test="num != null and num != ''">
+                AND	NUM LIKE '%' || #{num} || '%'
+            </if>
+    </select>
+    
+    <select id="readEmployee2List" resultType="employeeV">
+            <!-- sample.sampleMng.readEmployee -->
+            SELECT
+                NUM, NAME
+            FROM UIP_EMPLOYEE
+            WHERE NUM like '4000%'
+    </select>
+    
+    <select id="readList2Cnt" parameterType="employeeV" resultType="int">
+            <!-- sample.sampleMng.readListCnt -->
+            SELECT COUNT(*) total
+            FROM UIP_EMPLOYEE
+            WHERE NUM like '4000%'
+            <if test="num != null and num != ''">
+                AND NUM LIKE '%' || #{num} || '%'
+            </if>
+    </select>
+
+</mapper>

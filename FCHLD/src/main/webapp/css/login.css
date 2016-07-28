@@ -1,0 +1,155 @@
+/* Block : login
+---------------------------------------------------------*/
+#LblockLogin {
+	position:absolute;
+	width:556px;
+	height:412px;
+	top:50%;
+	left:50%;
+	margin:-201px 0 0 -278px;
+	background:url(../images/login_bg.png) no-repeat;
+}
+#LblockLogin img.Llogo {
+	margin:0px 0 0 190px;
+}
+#LblockLogin img.Lmain {
+	display:none;
+}
+#LblockLogin ul.menu {
+	position:absolute;
+	left:122px;
+	top:12px;
+	height:20px;
+	font-family:Arial;
+}
+#LblockLogin ul.menu li {
+	float:left;
+	padding:0 10px 0 8px;
+	background:url(../images/login_menu_line.gif) no-repeat right 6px;
+}
+#LblockLogin ul.menu li.Llast {
+	background:none;
+}
+#LblockLogin ul.menu a {
+	color:#878787;
+	text-decoration:none;
+}
+#LblockLogin ul.menu a:hover {
+	color:#ff9600;
+}
+#LblockLogin h1 {
+	display:none;
+}
+#LblockLogin div.body {
+	width:526px;
+	margin:275px 93px 0 35px;
+}
+#LblockLogin div.body fieldset {
+	position:relative;
+	float:left;
+	width:357px;
+	margin-left:65px;
+	margin-top:-166px;
+}
+#LblockLogin div.body p.id, #LblockLogin div.body p.pw {
+	width:261px;
+	height:37px;
+	margin-bottom:9px;
+}
+* html #LblockLogin div.body p.id, * html #LblockLogin div.body p.pw {
+	height:22px;
+	padding:4px 0 0 62px;
+}
+
+#LblockLogin div.body p.id {
+	background:url(../images/login_id_bg.gif) no-repeat;
+}
+#LblockLogin div.body p.pw {
+	background:url(../images/login_pw_bg.gif) no-repeat;
+}
+#LblockLogin div.body p.id label, #LblockLogin div.body p.pw label {
+	display:block;
+	height:0;
+	overflow:hidden;
+}
+#LblockLogin div.body p.id input, #LblockLogin div.body p.pw input {
+	color:#7D7D7D;
+	width:210px;
+	height:33px;
+	line-height:33px;
+	margin:2px 0 0 48px;
+	border:0;
+	vertical-align:middle;
+	background-color:transparent;
+}
+#LblockLogin div.body p.remember {
+	float:left;
+	display:inline;
+	width:114px;
+	margin:11px 0 0 58px;
+	font-family:Arial;
+}
+* html #LblockLogin div.body p.remember {
+	margin:7px 0 0 58px;
+}
+html #LblockLogin div.body p.remember {
+	margin:7px 0 0 0;
+}
+#LblockLogin div.body p.remember input {
+	float:left;
+	margin-right:7px;
+}
+* html #LblockLogin div.body p.remember input {
+	margin-right:3px;
+}
+html #LblockLogin div.body p.remember input {
+	margin-right:3px;
+}
+#LblockLogin div.body p.remember label {
+	float:right;
+	display:inline;
+	width:89px;
+	height:0;
+	padding-top:14px;
+	margin-right:3px;
+	overflow:hidden;
+	background:url(../images/login_remember.gif) no-repeat;
+}
+* html #LblockLogin div.body p.remember label {
+	margin:4px 0 0 0;
+}
+#LblockLogin div.body p.btn {
+	float:right;
+	width:86px;
+	height:81px;
+	margin:-91px 0 0 0;
+}
+#LblockLogin div.footer {
+	position:absolute;
+	bottom:0px;
+	left:18px;
+	width:602px;
+	height:28px;
+	padding:8px 0 0 33px;
+}
+#LblockLogin div.footer img {
+	padding-bottom:2px;
+	margin-right:5px;
+}
+#LblockLogin div.footer span {
+	color:#9C9C9C;
+	font-family:Arial;
+}
+#LblockLogin div.footer span.email {
+	display:inline-block;
+	padding-left:5px;
+	background:url(../images/login_footer_slash.gif) no-repeat 0px 4px;
+}
+#LblockLogin div.footer span.copyright {
+	padding-left:13px;
+	background:url(../images/login_footer_line.gif) no-repeat 5px 3px;
+}
+#LblockLoginBody{
+	font:75%/1.5em Gulim;
+	color:#494949;
+}

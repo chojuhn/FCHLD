@@ -1,0 +1,57 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+    <!-- enable use-expressions -->
+    <http auto-config="true" use-expressions="true">
+        <intercept-url pattern="/com/login.do"          access="permitAll" />
+        <intercept-url pattern="/com/403.do"            access="permitAll" />
+        <intercept-url pattern="/com/updateLgnPwd.ajax" access="permitAll" />
+        <intercept-url pattern="/sample/**"             access="permitAll" />
+        <intercept-url pattern="/api/**"             access="permitAll" />
+        <intercept-url pattern="/com/**"                access="hasRole('ROLE_9')" />
+        <intercept-url pattern="^(/admin).*$"           access="hasRole('ROLE_ADMIN')" />
+               
+        <form-login
+            login-page="/com/login.do"
+            username-parameter="usrId"
+            password-parameter="usrPw"
+            login-processing-url="/com/login.ajax"
+            default-target-url="/index.do"
+            authentication-success-handler-ref="loginSuccessHandler"
+            authentication-failure-handler-ref="loginFailureHandler" />
+
+        <logout invalidate-session="true" logout-url="/com/logout.do" logout-success-url="/com/login.do" />    
+
+        <!-- enable csrf protection -->
+        <csrf disabled="true"/>
+    </http>
+    
+    <!-- Select users and user_roles from database -->
+    <authentication-manager>
+        <authentication-provider user-service-ref="loginUserDetailService">
+           <password-encoder ref="passwordEncoder">
+               <salt-source ref="saltSource" />
+           </password-encoder>
+        </authentication-provider>
+    </authentication-manager>    
+    
+    <!-- SHA-256 암호화 -->
+    <beans:bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+        <beans:constructor-arg value="256" />
+    </beans:bean>
+
+    <!-- Salt 적용 -->
+    <beans:bean id="saltSource" class="org.springframework.security.authentication.dao.ReflectionSaltSource">
+        <beans:property name="userPropertyToUse" value="username" />
+    </beans:bean>
+    
+    <beans:bean id="loginUserDetailService" class="kscc.com.login.util.LoginHelper" />    
+    <beans:bean id="loginSuccessHandler"    class="kscc.com.login.util.LoginSuccessHandler" /> 
+    <beans:bean id="loginFailureHandler"    class="kscc.com.login.util.LoginFailureHandler" />
+
+</beans:beans>
